@@ -9,19 +9,11 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imageUrl: {
-        type: String,
-        required: false,
-    },
-    likes: {
+    postId: {
         type: Array,
-        required: false,
-    },
-    dislikes: {
-        type: Array,
-        required: false,
+        required: true,
     }
 }, { timestamps: true });
 
 
-module.exports = mongoose.model("Post", UserSchema);
+module.exports = mongoose.model("Comment", UserSchema);

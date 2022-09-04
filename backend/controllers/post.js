@@ -24,12 +24,12 @@ exports.createPost = async (req, res, next) => {
      * lorsque l'on requête directement req.body ???
      */
     const postObject = req.body;
+
     const newPost = new Post({
         ...postObject,
         commentId: [],
         dislikes: [],
         likes: [],
-        imageUrl: [],
         //imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     });
     try {
