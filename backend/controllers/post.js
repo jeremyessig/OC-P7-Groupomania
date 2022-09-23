@@ -30,7 +30,7 @@ exports.createPost = async (req, res, next) => {
         commentId: [],
         dislikes: [],
         likes: [],
-        //imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     });
     try {
         const savedPost = await newPost.save();
